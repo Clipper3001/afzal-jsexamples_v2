@@ -1,0 +1,41 @@
+// 4. Type Casting
+
+// converting valures to numbers using the number object
+console.log(Number("3.142"));
+console.log(Number(Math.PI))  // 3.141592653589793
+console.log(Number(" "))      // 0
+console.log(Number(""))       // 0
+console.log(Number("88 88"))  // NaN ( ie; not a number)
+console.log(Number("Steve"))  // NaN
+
+
+// converting values to strings using the strings object
+console.log(new Date());               /* unformatted of todays date & time */
+console.log(String(new Date()));        /* unformatted of todays date & time */
+console.log(String("98765"));           /* formatted (to string) of todays date & time */
+console.log(String(98765));
+
+
+// converting values into boolean
+console.log(Boolean("1"));                  /* true (truthy reponse) */
+console.log(Boolean(1));                    /* true  */
+console.log(Boolean("0"));                  /* true (truthy reponse)  */
+console.log(Boolean(0));                    /* false */
+console.log(Boolean(" "));                  /* true (truthy reponse)  */
+console.log(Boolean(""));                   /* false (falsy response*/
+console.log(Boolean("John"));               /* true  */
+
+
+
+// trivia
+function greetUser(){
+    let userName = prompt("Please enter your name:");
+    
+    if(userName.trim()){    // "  " will be trimmed, guard rail to prevent spaces being used
+        alert(`Welcome to FSD ${userName}!!!`);
+    }else{
+        alert("We did not receive your name.");
+    }
+}
+ 
+greetUser();
