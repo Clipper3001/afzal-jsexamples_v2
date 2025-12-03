@@ -248,3 +248,6 @@ const game = new Field(gameField);
 
 // Done: Invoke method start(...) from the instance of game object
 game.start();
+
+
+// 3 December 2025
