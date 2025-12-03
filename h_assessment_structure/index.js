@@ -24,7 +24,7 @@ const MSG_LEFT = "You moved left.";
 const MSG_RIGHT = "You moved right.";
 const MSG_QUIT = "You quit. Try again.";
 const MSG_INVALID = "That's not right";
-const MSG_WELCOME = "\n***************************\nWelcome to Find My Hat Game\n***************************\n";
+const MSG_WELCOME = "\n***************************\nWelcome to Find My Hat Game\n***************************\n\nMove (*) to (^) to Win! Use key w,a,s,d for controls\n";
 
 
 // Done: WIN / LOSE / OUT / QUIT messages constants
