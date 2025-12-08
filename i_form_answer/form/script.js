@@ -48,7 +48,7 @@ selectDom.addEventListener("change", () => {
         if(!found){
 
             // append the value to arrSelected
-            arrSelected.push(itemValue);  // another approach: arrSelected.push(collection[index].value);
+            arrSelected.push(itemValue);  
             console.log(arrSelected);
 
             // append and display the selected option in listSelected
@@ -69,12 +69,14 @@ selectDom.addEventListener("change", () => {
 
 // Clear the selection from listSelected and arrSelected
 // Use the splice method to remove all elements in an array
+const btnClearSelection = document.getElementById("btnClearSelection");
+
 btnClearSelection.addEventListener("click", () => {
     
     document.getElementById("listSelected").innerHTML = "";
-    arrSelected.splice(0, arrSelected.length);
+    arrSelected.splice(0, arrSelected.length); /* after clearing selection. result should be 0 */
 
-    console.log(arrSelected);
+    console.log(arrSelected); 
 });
 
 // Challenge Statement:
