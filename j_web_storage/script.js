@@ -37,7 +37,7 @@ async function fetchColorsList() {
 
         // Using fetch, call for the 1st page of Data from the given url
         const response = await fetch("https://reqres.in/api/unknown", {
-            headers: { "x-api-key": "reqres_11d6ee0c1eb94a648fdb77390ce0b51e" } /* key is own unique key from reqres.in */
+            headers: { "x-api-key": "API_KEY" } /* key is own unique key from reqres.in */
         });
         const resp = await response.json();
         console.log(resp);                                                      /* checks data is returned */
@@ -54,7 +54,7 @@ async function fetchColorsList() {
         // start fetch from 2nd page onwards
         for (let currentPage = page; currentPage <= totalPages; currentPage++) {
             const response = await fetch("https://reqres.in/api/unknown?page=" + currentPage, {
-                headers: { "x-api-key": "reqres_11d6ee0c1eb94a648fdb77390ce0b51e" }
+                headers: { "x-api-key": "API_KEY" }
             });
             const resp = await response.json();
             allColors = [...allColors, ...resp.data];                    /* unwrap the returned array to be pushed into allColors array */
@@ -86,7 +86,7 @@ async function fetchColorsList() {
         errHeader.textContent = "Error loading colours.";
         listColors.append(errHeader);
     }
-    
+
 }
 
 // 2.  Implement the loadColorsFromStorage() function so the colour values are loaded from the local storage. 
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (loadColors)
         return loadColorsFromStorage();
-    
-        return fetchColorsList();
+
+    return fetchColorsList();
 
 })

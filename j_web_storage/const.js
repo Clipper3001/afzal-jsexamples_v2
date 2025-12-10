@@ -1,0 +1,1 @@
+const API_KEY = "reqres_11d6ee0c1eb94a648fdb77390ce0b51e"
